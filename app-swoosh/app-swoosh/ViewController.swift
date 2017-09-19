@@ -17,12 +17,9 @@ class ViewController: UIViewController {
         
         
     }
- 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+ //click the back button
+    @IBAction func unwindFromSkillVC(inwindSegue: UIStoryboardSegue) {
+                 
     }
-
-
 }
 

@@ -53,6 +53,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="far-Dc-mjZ" kind="show" id="Cf5-TG-2bj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a team in your city &amp; dominate the image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FR5-Xd-p5U">
                                 <rect key="frame" x="72" y="271" width="270" height="44"/>
@@ -173,6 +176,13 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m83-gZ-mxc">
+                                <rect key="frame" x="20" y="9" width="29" height="24"/>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="2wu-l5-nfa" kind="unwind" unwindAction="unwindFromSkillVCWithInwindSegue:" id="VgS-jl-Jc0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -180,6 +190,7 @@
                             <constraint firstItem="jNL-ZH-ddc" firstAttribute="leading" secondItem="zol-tL-79i" secondAttribute="leading" id="5Kp-a0-8Lz"/>
                             <constraint firstItem="PRr-Zy-Rsc" firstAttribute="top" secondItem="oR3-V5-ZxJ" secondAttribute="bottom" constant="58" id="6D8-oo-78t"/>
                             <constraint firstItem="PRr-Zy-Rsc" firstAttribute="leading" secondItem="zol-tL-79i" secondAttribute="leading" id="75d-CA-1qh"/>
+                            <constraint firstItem="m83-gZ-mxc" firstAttribute="leading" secondItem="zol-tL-79i" secondAttribute="leadingMargin" id="FmT-jX-8Yx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oR3-V5-ZxJ" secondAttribute="trailing" id="HP6-vQ-ifj"/>
                             <constraint firstItem="oR3-V5-ZxJ" firstAttribute="leading" secondItem="zol-tL-79i" secondAttribute="leadingMargin" id="UJ7-9c-VZZ"/>
                             <constraint firstItem="v0j-B8-BMZ" firstAttribute="top" secondItem="jNL-ZH-ddc" secondAttribute="bottom" id="bsR-NY-dSP"/>
@@ -189,10 +200,12 @@
                             <constraint firstAttribute="trailing" secondItem="jNL-ZH-ddc" secondAttribute="trailing" id="nm0-qg-1W6"/>
                             <constraint firstItem="mAD-IW-ogZ" firstAttribute="trailing" secondItem="zol-tL-79i" secondAttribute="trailingMargin" id="tuz-4l-aTY"/>
                             <constraint firstItem="mAD-IW-ogZ" firstAttribute="leading" secondItem="zol-tL-79i" secondAttribute="leadingMargin" id="yUc-Hx-EyN"/>
+                            <constraint firstItem="m83-gZ-mxc" firstAttribute="top" secondItem="zol-tL-79i" secondAttribute="topMargin" constant="9" id="ydi-5L-unU"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Abz-Uv-l4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2wu-l5-nfa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="888.40579710144937" y="-369.29347826086962"/>
         </scene>
@@ -293,6 +306,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
