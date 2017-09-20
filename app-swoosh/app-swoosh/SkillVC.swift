@@ -8,11 +8,14 @@
 
 import UIKit
 
-class SkillVC: UIViewController {
 
+class SkillVC: UIViewController {
+    var player: Player!
+    
+    @IBOutlet weak var finishBtn: BorderButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(player.desiredLeague)
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +24,32 @@ class SkillVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func beginnerPressed(_ sender: Any) {
+    }
+    @IBAction func ballerPressed(_ sender: Any) {
+    }
+    
+    
+    
+    
+    
+    
+ /*   @IBAction func onMensTapped(_ sender: Any) {
+        selectLeague(leagueType: "mens")
+    }
+    
+    @IBAction func onWomensTapped(_ sender: Any) {
+        selectLeague(leagueType: "womens")
+    }
+    
+    @IBAction func onCoedTapped(_ sender: Any) {
+        selectLeague(leagueType: "coed")
+    }
+    
+    func selectSkill(skillType: String) {
+        player.desiredLeague = leagueType
+        finishBtn.isEnabled = true
+    }
     /*
     // MARK: - Navigation
 
@@ -31,5 +59,5 @@ class SkillVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+*/
 }
