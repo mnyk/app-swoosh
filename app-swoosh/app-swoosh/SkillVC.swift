@@ -11,12 +11,16 @@ import UIKit
 
 class SkillVC: UIViewController {
     var player: Player!
+    var desiredSkill = ""
+    
+    
     
     @IBOutlet weak var finishBtn: BorderButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         print(player.desiredLeague)
         // Do any additional setup after loading the view.
+        player = Player()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,29 +29,15 @@ class SkillVC: UIViewController {
     }
     
     @IBAction func beginnerPressed(_ sender: Any) {
+        selectSkill(skillType: "beginner")
+        
     }
     @IBAction func ballerPressed(_ sender: Any) {
-    }
-    
-    
-    
-    
-    
-    
- /*   @IBAction func onMensTapped(_ sender: Any) {
-        selectLeague(leagueType: "mens")
-    }
-    
-    @IBAction func onWomensTapped(_ sender: Any) {
-        selectLeague(leagueType: "womens")
-    }
-    
-    @IBAction func onCoedTapped(_ sender: Any) {
-        selectLeague(leagueType: "coed")
+        selectSkill(skillType: "baller")
     }
     
     func selectSkill(skillType: String) {
-        player.desiredLeague = leagueType
+        player.desiredSkill = skillType
         finishBtn.isEnabled = true
     }
     /*
@@ -59,5 +49,4 @@ class SkillVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-*/
 }
