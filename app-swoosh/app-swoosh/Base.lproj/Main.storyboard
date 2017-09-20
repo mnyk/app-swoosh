@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Heavy</string>
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -94,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="90.400000000000006" y="-369.26536731634184"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="EtO-X2-rUT">
             <objects>
-                <viewController id="far-Dc-mjZ" sceneMemberID="viewController">
+                <viewController id="far-Dc-mjZ" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Y9-1I-rag"/>
                         <viewControllerLayoutGuide type="bottom" id="v0j-B8-BMZ"/>
@@ -116,7 +122,7 @@
                                         <rect key="frame" x="127.66666666666667" y="0.0" width="119.00000000000001" height="20"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desired league:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w15-G0-Hoa">
-                                        <rect key="frame" x="87" y="84" width="200.33333333333331" height="35.666666666666657"/>
+                                        <rect key="frame" x="87" y="84" width="200" height="35.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Wm4-hn-42G"/>
                                         </constraints>
@@ -175,9 +181,12 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="far-Dc-mjZ" eventType="touchUpInside" id="v8H-qf-1YF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m83-gZ-mxc">
-                                <rect key="frame" x="20" y="9" width="29" height="24"/>
+                                <rect key="frame" x="20" y="29" width="29" height="24"/>
                                 <state key="normal" image="backButton"/>
                                 <connections>
                                     <segue destination="2wu-l5-nfa" kind="unwind" unwindAction="unwindFromSkillVCWithInwindSegue:" id="VgS-jl-Jc0"/>
@@ -203,16 +212,19 @@
                             <constraint firstItem="m83-gZ-mxc" firstAttribute="top" secondItem="zol-tL-79i" secondAttribute="topMargin" constant="9" id="ydi-5L-unU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="ftO-2K-JAX" kind="show" identifier="skillVCSegue" id="gwj-st-6TE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Abz-Uv-l4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="2wu-l5-nfa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="888.40579710144937" y="-369.29347826086962"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="654-cL-uMB">
             <objects>
-                <viewController id="ftO-2K-JAX" sceneMemberID="viewController">
+                <viewController id="ftO-2K-JAX" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hDy-b5-9sT"/>
                         <viewControllerLayoutGuide type="bottom" id="uef-Iv-ceu"/>
@@ -231,7 +243,7 @@
                                         <rect key="frame" x="127.66666666666667" y="0.0" width="119.00000000000001" height="20"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFW-3f-1Fa">
-                                        <rect key="frame" x="87" y="84" width="200.33333333333331" height="35.666666666666657"/>
+                                        <rect key="frame" x="87" y="84" width="200" height="35.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="cnP-fv-FGq"/>
                                         </constraints>
